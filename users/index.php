@@ -114,9 +114,9 @@ require('../config/db.php');
              </td>
              <td>1</td>
              <td>
-              <a href="" class="btn btn-sm btn-primary">Edit</a>
-              <a href="" class="btn btn-sm btn-info">Show</a>
-              <a href="users\delete.php" class="btn btn-sm btn-danger">Delete</a>
+              <a href="edit.php?id=<?php echo $data['id']; ?>" class="btn btn-sm btn-primary">Edit</a>
+              <a href="show.php?id=<?php echo $data['id']; ?>" class="btn btn-sm btn-info">Show</a>
+              <a href="delete.php?id=<?php echo $data['id']; ?> " class="btn btn-sm btn-danger">Delete</a>
              </td>
            </tr>
           

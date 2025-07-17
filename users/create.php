@@ -88,8 +88,12 @@ require('../config/db.php');
 
                             if ($result) {
                                 echo "<div class='alert alert-success'>User successfully added.</div>";
+                               echo "<meta http-equiv=\"refresh\" content=\"0;URL=index.php\">";
+
                             } else {
                                 echo "<div class='alert alert-danger'>Database insert failed: " . mysqli_error($conn) . "</div>";
+                                echo "<meta http-equiv=\"refresh\" content=\"0;URL=create.php\">";
+
                             }
                         }
                         ?>

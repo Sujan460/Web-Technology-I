@@ -1,9 +1,12 @@
 <?php
 require('../config/db.php');
 
-$id = $_GET['id'];
-$query = "DELETE FROM users WHERE id=$id";
-$result = mysqli_query($conn, $query);
+if(isset($_GET['id'])){
 
-header("Location: index.php");
-exit();
+    $id = $_GET['id'];
+    $query = "DELETE FROM users WHERE id=$id";
+    $result = mysqli_query($conn, $query);
+    
+    echo "<meta http-equiv=\"refresh\" content=\"0;URL=index.php\">";
+
+}    
